@@ -1,0 +1,436 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size: 16px;
+  --exo: "Exo 2", Arial, sans-serif;
+  --btncolor: linear-gradient(
+    90deg,
+    rgba(40, 246, 226, 0.8) -58.68%,
+    rgba(9, 105, 184, 0.8) 156.6%
+  );
+  --blackgradient: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) -58.68%,
+    rgba(0, 0, 0, 0) 156.6%
+  );
+  --pink-gradient: linear-gradient(90deg, #bc4d87 0%, #bc4d87 100%);
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  /* color: var(--primary-color); */
+}
+
+p {
+  /* color: var(--secondary-color); */
+}
+
+/* products and button section   */
+.btn-custom {
+  /* background-color: var(--secondary-color); */
+  background-color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+.btn-custom a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.current {
+  background: linear-gradient(
+    90deg,
+    rgba(40, 246, 226, 0.8) -58.68%,
+    rgba(9, 105, 184, 0.8) 156.6%
+  );
+  color: white;
+  font-weight: 600;
+}
+/* banner section  */
+.banner {
+  position: relative;
+  height: 30vh; /* Fixed height of 60% of the viewport height */
+  width: 100%; /* Full width of the container */
+  background: url("./assets/banner.jpeg") no-repeat center center; /* Image background */
+  background-size: cover; /* Ensure the image covers the entire container */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
+
+.banner-title {
+  text-align: center; /* Center the text */
+  color: #fff; /* White text for contrast */
+  padding: 20px; /* Padding around the text */
+  z-index: 3;
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.37);
+  z-index: 2;
+}
+
+/* four image section  */
+.four-image-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  gap: 10px; /* Space between boxes */
+  padding: 1rem 3rem;
+  margin: 1rem;
+}
+
+.four-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Fixed height for each box */
+  flex: 1 1 calc(50% - 10px); /* Default to two boxes per row */
+  max-width: 300px;
+  border-radius: 0.5rem;
+  align-content: flex-end;
+}
+
+.image1 {
+  background: url(./assets/body.jpg) no-repeat center center/cover;
+}
+.image2 {
+  background: url(./assets/skin.jpg) no-repeat center center/cover;
+}
+.image3 {
+  background: url(./assets/hair.jpg) no-repeat center center/cover;
+}
+.image4 {
+  background: url(./assets/beauty.jpg) no-repeat center center/cover;
+}
+
+.four-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    193deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(0, 0, 0, 0.452) 100%
+  );
+  z-index: 2;
+}
+
+.four-image-title {
+  position: relative;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 99;
+}
+/* xxx four image section xxx */
+/* darma section */
+.derma-section {
+  display: flex;
+  flex-direction: column;
+  height: 40vh; /* Full viewport height */
+  width: 100%;
+}
+
+.darma-left,
+.darma-right {
+  flex: 1; /* Ensure equal width for both left and right */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100%; /* Ensure full height */
+  padding: 2rem 3rem;
+}
+
+.darma-left {
+  background: rgba(234, 234, 234, 1);
+}
+
+.darma-right {
+  background: var(--pink-gradient);
+  flex-direction: column; /* Arrange content vertically */
+  text-align: center; /* Center text */
+}
+
+.darma-left img {
+  max-width: 100%; /* Ensure image resizes proportionally */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.darma-title {
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--exo);
+}
+
+.darma-btn {
+  max-height: 100px;
+  max-width: 200px;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background-color: var(--pink-gradient);
+  border: white solid 1px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 1rem; /* Font size */
+}
+
+/* image with text  */
+.image-text-section {
+  margin-top: 5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+}
+
+.right-title {
+  text-align-last: center;
+}
+
+.right-text {
+  text-align-last: center;
+}
+
+.left img {
+  background-repeat: no-repeat;
+  object-fit: cover;
+  max-height: auto;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+/* xxxx image with text xxx  */
+
+/* logo section  */
+.logo-section {
+  margin-top: 7rem;
+  overflow: hidden;
+  width: 100%;
+  background-color: #6c757d;
+  padding: 2rem 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.logo {
+  height: 35px;
+  margin-right: 5px;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* xxx logo section xxx */
+
+/* tera section  */
+.tera-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 3rem;
+}
+
+.tera-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid; /* Border width */
+  border-image-source: linear-gradient(
+    107.64deg,
+    #e0f472 -28.42%,
+    #717946 96.42%
+  );
+  border-image-slice: 1; /* Ensures the border image is used fully */
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.tera-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tera-text h4 {
+  margin: 0;
+  font-weight: 200;
+}
+
+.tera-text h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.tera-img img {
+  max-width: 10rem;
+}
+/* xxx tera section xxx */
+
+/* media queries  */
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  /* products and button section   */
+  .nav-container {
+    padding: 3rem 5rem;
+  }
+
+  /* .product-title {
+
+      } */
+
+  .products-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .products-btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .products-btn a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .active {
+    background: var(--btncolor);
+    color: white;
+    font-weight: 600;
+  }
+
+  /* xxxxxxxxxx products and button section  xxxxxxxxxx */
+
+  /* banner section  */
+  .banner {
+    height: 60vh; /* Fixed height of 60% of the viewport height */
+  }
+
+  .banner-title {
+    font-size: 3rem;
+  }
+
+  /* xxxx banner section xxxx */
+
+  /* four image section  */
+  .four-image-section {
+    position: relative;
+    top: -10rem;
+    justify-content: center;
+    z-index: 9;
+  }
+  .four-image {
+    flex: 1 1 calc(25% - 10px); /* Default to two boxes per row */
+  }
+
+  .four-image {
+    min-height: 300px;
+  }
+  /* xxx four image section  xxx */
+
+  .derma-section {
+    flex-direction: row; /* Change direction to row */
+    height: 20vh; /* Adjust height to fit content */
+    background: rgba(234, 234, 234, 1);
+  }
+
+  .darma-left {
+    flex: 0 0 30%; /* 30% of the width */
+    padding: 2rem; /* Adjust padding if needed */
+  }
+
+  .darma-right {
+    flex-direction: row;
+    flex: 0 0 70%; /* 70% of the width */
+    padding: 2rem; /* Adjust padding if needed */
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+  }
+
+  .darma-btn {
+    margin-left: 3rem;
+  }
+
+  .darma-left img {
+    max-width: 100%; /* Ensure image resizes proportionally */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the div */
+  }
+
+  /* image with text   */
+  .image-text-section {
+    flex-direction: row;
+    padding: 5rem 7rem;
+  }
+
+  .left img {
+    max-width: 40rem;
+  }
+
+  .right {
+    max-width: 30rem;
+  }
+  /*xxx image with text  xxx */
+
+  /* tera beauty  */
+  .tera-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 40rem;
+    /* border-radius: 5re; */
+  }
+  /* xxx tera beauty xxx */
+}

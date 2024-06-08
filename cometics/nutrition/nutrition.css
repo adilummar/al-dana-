@@ -1,0 +1,124 @@
+:root {
+    --secondary-color: #f0f0f0;
+    --exo: "Exo 2", Arial, sans-serif;
+    --btncolor: linear-gradient(
+      90deg,
+      rgba(40, 246, 226, 0.8) -58.68%,
+      rgba(9, 105, 184, 0.8) 156.6%
+    );
+  }
+  
+  body {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .btn-custom {
+    /* background-color: var(--secondary-color); */
+    background-color: #f0f0f0;
+    text-transform: uppercase;
+  }
+  
+  .btn-custom a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .current {
+    background: linear-gradient(
+      90deg,
+      rgba(40, 246, 226, 0.8) -58.68%,
+      rgba(9, 105, 184, 0.8) 156.6%
+    );
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* banner section  */
+  .banner {
+    position: relative;
+    height: 30vh; /* Fixed height of 60% of the viewport height */
+    width: 100%; /* Full width of the container */
+    background: url("./assets/banner.jpeg") no-repeat center center; /* Image background */
+    background-size: cover; /* Ensure the image covers the entire container */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .banner-title {
+    text-align: center; /* Center the text */
+    color: #fff; /* White text for contrast */
+    padding: 20px; /* Padding around the text */
+    z-index: 3;
+    font-size: 1.5rem;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(26, 117, 4, 0.63);
+    z-index: 2;
+  }
+  
+  /* logo section  */
+  .logo-section {
+    margin-top: 7rem;
+    overflow: hidden;
+    width: 100%;
+    background-color: #6c757d;
+    padding: 2rem 0;
+  }
+  
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  .logo {
+    max-height: 35px;
+    margin-right: 5px;
+  }
+  
+  /* Keyframes for the scrolling effect */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  /* xxx logo section xxx */
+  
+  @media (min-width: 992px) {
+    /* banner section  */
+    .banner {
+      height: 60vh; /* Fixed height of 60% of the viewport height */
+    }
+  
+    .banner-title {
+      font-size: 3rem;
+    }
+  
+    /* xxxx banner section xxxx */
+  
+    /* logo section  */
+    .logo {
+      max-height: 55px;
+      margin-right: 5px;
+    }
+    /* xxx logo section xxx  */
+  }
+  

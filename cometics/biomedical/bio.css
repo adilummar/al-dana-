@@ -1,0 +1,516 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-size: 16px;
+  --exo: "Exo 2", Arial, sans-serif;
+  --btncolor: linear-gradient(
+    90deg,
+    rgba(40, 246, 226, 0.8) -58.68%,
+    rgba(9, 105, 184, 0.8) 156.6%
+  );
+  --blackgradient: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) -58.68%,
+    rgba(0, 0, 0, 0) 156.6%
+  );
+  --pink-gradient: linear-gradient(90deg, #bc4d87 0%, #bc4d87 100%);
+  --card-color: rgb(241, 241, 241);
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  /* color: var(--primary-color); */
+}
+
+p {
+  /* color: var(--secondary-color); */
+}
+
+/* products and button section */
+.btn-custom {
+  /* background-color: var(--secondary-color); */
+  background-color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+.btn-custom a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.current {
+  background: linear-gradient(
+    90deg,
+    rgba(40, 246, 226, 0.8) -58.68%,
+    rgba(9, 105, 184, 0.8) 156.6%
+  );
+  color: white;
+  font-weight: 600;
+}
+/* banner section */
+.banner {
+  position: relative;
+  height: 30vh; /* Fixed height of 60% of the viewport height */
+  width: 100%; /* Full width of the container */
+  background: url("./assets/bio\ banner.jpeg") no-repeat center center; /* Image background */
+  background-size: cover; /* Ensure the image covers the entire container */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
+
+.banner-title {
+  text-align: center; /* Center the text */
+  color: #fff; /* White text for contrast */
+  padding: 20px; /* Padding around the text */
+  z-index: 3;
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.37);
+  z-index: 2;
+}
+
+/* card section */
+.card-section {
+  padding: 2rem;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping of child elements */
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 1.5rem; /* Space between cards */
+}
+
+.card {
+  display: inline-flex; /* Inline-flex to respect the white-space: nowrap */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--card-color);
+  min-width: 200px; /* Minimum width for each card */
+  max-width: 300px; /* Maximum width for each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better look */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: hidden; /* Ensure content stays within the card's boundaries */
+  white-space: normal; /* Allow text to wrap */
+}
+
+.mr-left{
+  margin-left: 26rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Fixed height for the image container */
+  overflow: hidden; /* Hide overflow to maintain aspect ratio */
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-text {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.card-text p {
+  margin: 0;
+  color: #666;
+  word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+/* logo section */
+.logo-section {
+  margin-top: 7rem;
+  overflow: hidden;
+  width: 100%;
+  background-color: #6c757d;
+  padding: 2rem 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.logo {
+  height: 55px;
+  margin-right: 5px;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* xxx logo section xxx */
+
+/* form section  */
+.form-container h2{
+  text-align: center;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #007BFF;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 16px;
+    color: #999;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 5px;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+/* xxx form section xxx */
+/* tab view  */
+
+@media (min-width: 600px) {
+  .form-row {
+      flex-direction: row;
+      gap: 20px;
+  }
+
+  .form-row .form-group {
+      min-width: 0;
+  }
+}
+/* xxxx form section xxxx  */
+
+/* desktop view styles */
+
+
+@media (max-width: 991px) {
+  /* Ensure all .card-wrapper elements are in a single line */
+  .card-section {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1rem; /* Space between cards */
+  }
+
+  .card {
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+   /* products and button section   */
+   .nav-container {
+    /* padding: 3rem 5rem; */
+  }
+
+  /* .product-title {
+
+      } */
+
+  /* .products-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .products-btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .products-btn a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .active {
+    background: var(--btncolor);
+    color: white;
+    font-weight: 600;
+  } */
+
+  /* xxxxxxxxxx products and button section  xxxxxxxxxx */
+  
+
+  /* xxxx banner section xxxx */
+  /* card section */
+  .card-section {
+    padding: 4rem;
+    overflow: visible;
+    position: relative;
+    height: 50vh; /* Ensure the container takes the full height */
+    margin-top: 5rem;
+  }
+
+  .card-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .card:nth-child(even) .card-image {
+    order: 2;
+  }
+
+  .card:nth-child(even) .card-text {
+    order: 1;
+  }
+
+  .card-image,
+  .card-text {
+    width: 50%;
+  }
+
+  .mr-left{
+    margin: 0;
+  }
+
+  .card-image {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .image-lefting {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .card-image img {
+    max-width: 30rem;
+    max-height: 20rem;
+    border-radius: 1rem;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: left;
+    text-align-last: center;
+    font-size: 1rem;
+  }
+
+  /* logo section */
+  .logo-section {
+    margin-top: 95rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  /* xxxx logo section xxxx */
+
+  .form-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    background: none;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #007BFF;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 16px;
+    color: #999;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 5px;
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+
+
+}
